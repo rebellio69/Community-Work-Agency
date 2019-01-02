@@ -71,12 +71,11 @@ html {
 	font-size: 16px;
 }
 .container {
-  background-color: #c9b6c6;
-
+  background-color: #89357c;
 }
 .content {
   font-family: 'Ubuntu', sans-serif;
-  padding: 1rem;
+  padding: 1rem 2rem 2rem 2rem;
   line-height: 1.5rem;
   color: #3a3a3a;
   font-size: 1.25rem;
@@ -94,6 +93,9 @@ h1 {
 }
 h2 {
   font-size: 1.75rem;
+}
+h3 {
+  font-size: 1.5rem;
 }
 ul {
   list-style-type: disc;
@@ -214,64 +216,68 @@ nav input[type=text]:hover {
 
 /*Title Section*/
 .title {
-  font-weight: bold;
-  position: relative;
-	top: 4rem;
-  margin-bottom: 4rem;
-  border-bottom: 2px solid #3a3a3a;
-}
-.title h1 {
-  background-color: #89357c;
-  padding: 1rem;
-}
-
-/*Overview Section*/
-.overview h2 {
-  background-color: #2b96ab;
-}
-.expand-button {
-  position: relative;
-  left: 90%;
-  bottom: 0;
-  font-size: 1rem;
-  background-color: #c9b6c6;
-  color: black;
-  margin: 1rem 0.5rem 0.5rem 0.5rem;
-  padding: 0.75rem;
-  border: 1px solid #2b96ab;
-
-}
-.expand-button:hover {
-  color: white;
-  background-color: #2b96ab;
-}
-
-/*Middle Section*/
-.middle {
   display: flex;
-}
-.actions, .resources {
-  width:  50%;
-}
-.actions h2, .resources h2 {
-background-color: #5f9637;
-}
-.actions {
-  padding-right: 0.5rem;
-}
-.resources {
-  padding-left: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 4rem;
+  margin-bottom: 4rem;
+  border-bottom: 2px solid #c9c6b6;
+  background-color: #3a3a3a;
 }
 
-
-/*Considerations Section*/
-.considerations h2 {
-background-color: #e98624;
+.title img {
+  width: 50%;
+  height: auto;
 }
 
-#full {
+/*accordion Section*/
+.accordion {
+  background-color: #2b96ab;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  padding: 1rem 1rem 1rem 2rem;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s ease-in;
+}
+
+.active, .accordion:hover {
+  background-color: #3a3a3a;
+}
+.accordion:after {
+  content: '\02795';
+  font-size: 1rem;
+  color: #777;
+  float: right;
+  margin-left: 1rem;
+}
+
+.active:after {
+  content: "\2796";
+}
+
+.panel {
+  padding: 1rem 1rem 1rem 2.5rem;
+  background-color: white;
   display: none;
+  overflow: hidden;
+  color: black;
+
 }
+.link h2 {
+  padding: 1rem 1rem 1rem 0;
+}
+.link h2:hover {
+  color: #e98624;
+  transition: 0.4s ease-in;
+}
+
+
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
